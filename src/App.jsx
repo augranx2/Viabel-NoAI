@@ -294,10 +294,10 @@ function ParamChart({ entries, kelas, parameter, paramLabel }) {
   const maxLimit = Math.max(limit.syarat, ...data.map((d) => d.value)) * 1.2;
 
   return (
-    <div className="avoid-break rounded-lg border border-slate-200 bg-white p-3">
+    <div className="avoid-break overflow-hidden rounded-lg border border-slate-200 bg-white p-3">
       <p className="mb-2 text-xs font-semibold text-slate-500">{paramLabel} — Kelas {kelas}</p>
       <ResponsiveContainer width="100%" height={280}>
-        <LineChart data={data} margin={{ top: 20, right: 15, left: 15, bottom: 55 }}>
+        <LineChart data={data} margin={{ top: 26, right: 15, left: 15, bottom: 55 }}>
           <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
           <XAxis dataKey="label" tick={{ fontSize: 10 }} angle={-35} textAnchor="end" interval={0} height={70} />
           <YAxis domain={[0, maxLimit]} tick={{ fontSize: 11 }} width={35} />
