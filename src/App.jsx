@@ -733,7 +733,7 @@ function FacilityDetail({ facilityKey, monthKey, setMonthKey, onBack, onSaved })
         kesimpulanUmum: localRes.kesimpulanUmum,
         tindakLanjut: localRes.tindakLanjut,
       }));
-      setAiError("Catatan: Menyusun narasi berbasis analisis data otomatis (lokal).");
+      setAiError("AI gagal merespons, dipakai narasi otomatis dari data sebagai gantinya. Detail error: " + err.message);
     } finally {
       setGenerating(false);
     }
